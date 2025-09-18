@@ -83,6 +83,67 @@ module.exports = {
         'warning': '#ff8c00',
         'error': '#ff4757',
         'info': '#00f5ff',
+        // Elegant Startup Colors
+        'elegant-slate': {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
+        'elegant-gold': {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        'elegant-emerald': {
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+        },
+        'elegant-rose': {
+          50: '#fff1f2',
+          100: '#ffe4e6',
+          200: '#fecdd3',
+          300: '#fda4af',
+          400: '#fb7185',
+          500: '#f43f5e',
+          600: '#e11d48',
+          700: '#be123c',
+          800: '#9f1239',
+          900: '#881337',
+        },
+        'elegant-violet': {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+        },
       },
       fontFamily: {
         'cyber': ['Orbitron', 'monospace'],
@@ -146,6 +207,14 @@ module.exports = {
         'card-hover': 'card-hover 0.3s ease-out',
         'loading-dots': 'loading-dots 1.5s infinite',
         'skeleton': 'skeleton 1.5s ease-in-out infinite',
+        // Elegant animations
+        'elegant-fade': 'elegant-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+        'elegant-slide': 'elegant-slide 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        'elegant-scale': 'elegant-scale 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+        'elegant-float': 'elegant-float 6s ease-in-out infinite',
+        'elegant-glow': 'elegant-glow 3s ease-in-out infinite',
+        'elegant-shimmer': 'elegant-shimmer 2s linear infinite',
+        'elegant-bounce': 'elegant-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
       keyframes: {
         float: {
@@ -234,11 +303,58 @@ module.exports = {
           '50%': { opacity: '0.4' },
           '100%': { opacity: '1' },
         },
+        // Elegant keyframes
+        'elegant-fade': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'elegant-slide': {
+          '0%': { opacity: '0', transform: 'translateX(-30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'elegant-scale': {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        'elegant-float': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '33%': { transform: 'translateY(-10px) rotate(1deg)' },
+          '66%': { transform: 'translateY(-5px) rotate(-1deg)' },
+        },
+        'elegant-glow': {
+          '0%, 100%': { 
+            boxShadow: '0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(0, 245, 255, 0.2)',
+            transform: 'scale(1)'
+          },
+          '50%': { 
+            boxShadow: '0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(0, 245, 255, 0.3)',
+            transform: 'scale(1.02)'
+          },
+        },
+        'elegant-shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        'elegant-bounce': {
+          '0%': { opacity: '0', transform: 'scale(0.3)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
       },
       backgroundImage: {
         'gradient-cyber': 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%)',
         'gradient-card': 'linear-gradient(145deg, #1a1a2e 0%, #16213e 100%)',
         'gradient-neon': 'linear-gradient(90deg, #00f5ff, #8b5cf6, #f73c7e)',
+        // Elegant gradients
+        'gradient-elegant': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'gradient-sunset': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        'gradient-ocean': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'gradient-forest': 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
+        'gradient-purple': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'gradient-glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
+        'gradient-elegant-dark': 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
       },
       backdropBlur: {
         'cyber': '10px',

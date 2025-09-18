@@ -282,18 +282,19 @@ html {
   color: white;
 }
 
-/* Grid animation */
+/* Optimized Grid animation */
 .animated-grid {
   background-image: 
-    linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: grid-move 20s linear infinite;
+    linear-gradient(rgba(0, 245, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-move 30s linear infinite;
+  will-change: transform;
 }
 
 @keyframes grid-move {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
+  100% { transform: translate(60px, 60px); }
 }
 
 /* Professional Edge Designs and Shapes */
@@ -482,6 +483,26 @@ html {
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Elegant Glass Morphism */
+.glass-elegant {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-elegant:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Professional Typography */
@@ -1158,6 +1179,45 @@ html {
   transform: translateY(-1px) scale(1.02);
 }
 
+/* Elegant Button Styles */
+.btn-elegant {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-elegant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-elegant:hover::before {
+  left: 100%;
+}
+
+.btn-elegant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.btn-elegant:active {
+  transform: translateY(0);
+  transition: transform 0.1s ease;
+}
+
 /* Premium Loading States */
 .premium-loading-dots {
   display: inline-block;
@@ -1681,6 +1741,26 @@ html {
   backface-visibility: hidden;
   -webkit-perspective: 1000;
   perspective: 1000;
+}
+
+/* Optimize animations for better performance */
+.animated-grid {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Reduce repaints and reflows */
+.motion-div {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Optimize floating elements */
+.floating-element {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 /* Reduce motion for users who prefer it */

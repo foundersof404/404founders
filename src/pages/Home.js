@@ -126,10 +126,10 @@ const HeroSection = memo(() => (
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-3 sm:mb-4 md:mb-6 leading-tight text-reveal"
         >
           <span className="text-white">
-            Founders of <span className="text-gradient typing-animation">404</span>
+            Founders of <span className="bg-gradient-to-r from-elegant-violet-400 via-elegant-rose-400 to-elegant-gold-400 bg-clip-text text-transparent typing-animation">404</span>
           </span>
           <br />
-          <span className="text-white opacity-60 text-lg sm:text-xl md:text-2xl lg:text-3xl font-body typing-text">
+          <span className="text-elegant-slate-300 text-lg sm:text-xl md:text-2xl lg:text-3xl font-body typing-text">
             Building the Future
           </span>
         </motion.h1>
@@ -150,7 +150,7 @@ const HeroSection = memo(() => (
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6 px-2 sm:px-4"
         >
-          <CTAButton to="/contact" variant="primary" className="!px-5 !py-3 sm:!px-6 sm:!py-4 !font-medium w-full sm:w-auto !text-sm sm:!text-base touch-target">
+          <CTAButton to="/contact" variant="primary" className="!px-5 !py-3 sm:!px-6 sm:!py-4 !font-medium w-full sm:w-auto !text-sm sm:!text-base touch-target btn-elegant">
             <span>Work With Us</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </CTAButton>
@@ -163,7 +163,7 @@ const HeroSection = memo(() => (
           >
             <Link
               to="/services"
-              className="bg-gradient-to-r from-emerald-400/20 to-blue-500/20 sm:bg-transparent border-2 border-emerald-400/50 sm:border-white/30 text-white hover:bg-gradient-to-r hover:from-emerald-400 hover:to-blue-500 hover:border-transparent hover:text-white px-5 py-3 sm:px-6 sm:py-4 font-medium rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base touch-target touch-friendly focus-enhanced"
+              className="bg-gradient-to-r from-elegant-emerald-400/20 to-elegant-violet-400/20 sm:bg-transparent border-2 border-elegant-emerald-400/50 sm:border-elegant-slate-300/30 text-white hover:bg-gradient-to-r hover:from-elegant-emerald-400 hover:to-elegant-violet-400 hover:border-transparent hover:text-white px-5 py-3 sm:px-6 sm:py-4 font-medium rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base touch-target touch-friendly focus-enhanced glass-elegant"
               style={{color: 'white !important'}}
             >
               <Sparkles className="w-4 h-4" />
