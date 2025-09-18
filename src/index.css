@@ -56,6 +56,78 @@ html {
   background-clip: text;
 }
 
+/* Enhanced gradient text utilities */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-cyber-blue {
+  --tw-gradient-from: #00f5ff;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 245, 255, 0));
+}
+
+.via-cyber-purple {
+  --tw-gradient-stops: var(--tw-gradient-from), #8b5cf6, var(--tw-gradient-to, rgba(139, 92, 246, 0));
+}
+
+.to-cyber-pink {
+  --tw-gradient-to: #f73c7e;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+/* Additional gradient utilities */
+.from-cyber-purple {
+  --tw-gradient-from: #8b5cf6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(139, 92, 246, 0));
+}
+
+.from-cyber-pink {
+  --tw-gradient-from: #f73c7e;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(247, 60, 126, 0));
+}
+
+.from-cyber-green {
+  --tw-gradient-from: #00ff85;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 255, 133, 0));
+}
+
+.from-cyber-orange {
+  --tw-gradient-from: #ff8c00;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 140, 0, 0));
+}
+
+.to-cyber-blue {
+  --tw-gradient-to: #00f5ff;
+}
+
+.to-cyber-purple {
+  --tw-gradient-to: #8b5cf6;
+}
+
+.to-cyber-orange {
+  --tw-gradient-to: #ff8c00;
+}
+
+.to-cyber-green {
+  --tw-gradient-to: #00ff85;
+}
+
+/* Ensure gradient text works properly */
+.bg-gradient-to-r.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .border-gradient {
   border-image: linear-gradient(90deg, #00f5ff, #8b5cf6, #f73c7e) 1;
 }
@@ -614,7 +686,19 @@ html {
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid #8b5cf6;
+  white-space: nowrap;
+  animation: typing-delayed 2s steps(30, end) 3.5s both, blink-caret-delayed 0.75s step-end infinite 5.5s;
+}
+
 @keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-delayed {
   from { width: 0; }
   to { width: 100%; }
 }
@@ -622,6 +706,11 @@ html {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #00f5ff; }
+}
+
+@keyframes blink-caret-delayed {
+  from, to { border-color: transparent; }
+  50% { border-color: #8b5cf6; }
 }
 
 /* Morphing Shapes */

@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code2, Code, Smartphone, Brain, GraduationCap, Settings, Sparkles, Rocket, CheckCircle } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Brain, GraduationCap, Settings, Sparkles, Rocket } from 'lucide-react';
 import Hero3D from '../components/3d/Hero3D';
 import StatsCounter from '../components/ui/StatsCounter';
 import ServicePreview from '../components/ui/ServicePreview';
@@ -9,8 +9,6 @@ import TestimonialsCarousel from '../components/ui/TestimonialsCarousel';
 import NewsletterSignup from '../components/ui/NewsletterSignup';
 import BlogPreview from '../components/ui/BlogPreview';
 import CaseStudyCard from '../components/ui/CaseStudyCard';
-import UrgencyBanner from '../components/ui/UrgencyBanner';
-import TrustBadges from '../components/ui/TrustBadges';
 import SocialProof from '../components/ui/SocialProof';
 import FreeConsultationCTA from '../components/ui/FreeConsultationCTA';
 
@@ -110,45 +108,49 @@ const HeroSection = memo(() => (
     </div>
 
     {/* Hero Content */}
-    <div className="relative z-10 container mx-auto px-4 text-center py-16 md:py-0">
+    <div className="relative z-10 container mx-auto px-4 text-center py-8 sm:py-12 md:py-0" style={{ paddingTop: '20px' }}>
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="max-w-5xl mx-auto"
       >
-        <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-xs sm:text-sm font-medium mb-4">
+        <motion.div variants={itemVariants} className="mb-3 sm:mb-4 md:mb-6">
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-xs sm:text-sm font-medium">
             ✨ Welcome to the Future of Development
           </span>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-hero font-display font-bold mb-4 md:mb-6 leading-tight text-reveal"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-3 sm:mb-4 md:mb-6 leading-tight text-reveal"
         >
-          <span className="text-white">Founders of <span className="text-gradient">404</span></span>
+          <span className="text-white">
+            Founders of <span className="text-gradient typing-animation">404</span>
+          </span>
           <br />
-          <span className="text-white opacity-60 text-section font-body">Building the Future</span>
+          <span className="text-white opacity-60 text-lg sm:text-xl md:text-2xl lg:text-3xl font-body typing-text">
+            Building the Future
+          </span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed px-4 mt-6 md:mt-0 mobile-text-responsive"
+          className="text-base sm:text-lg md:text-xl text-text-secondary mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4 mobile-text-responsive"
         >
           We specialize in creating complete solutions including{' '}
-          <span className="text-cyber-blue-400 font-semibold">Web Applications</span>,{' '}
-          <span className="text-cyber-purple-400 font-semibold">Mobile Apps</span>,{' '}
-          <span className="text-cyber-pink-400 font-semibold">AI Solutions</span>,{' '}
-          <span className="text-cyber-green-400 font-semibold">Senior Projects</span>, and{' '}
-          <span className="text-cyber-orange-400 font-semibold">Full Systems Development</span>
+          <span className="text-cyber-blue-400 font-semibold bg-cyber-blue/10 px-2 py-1 rounded-md">Web Applications</span>,{' '}
+          <span className="text-cyber-purple-400 font-semibold bg-cyber-purple/10 px-2 py-1 rounded-md">Mobile Apps</span>,{' '}
+          <span className="text-cyber-pink-400 font-semibold bg-cyber-pink/10 px-2 py-1 rounded-md">AI Solutions</span>,{' '}
+          <span className="text-cyber-green-400 font-semibold bg-cyber-green/10 px-2 py-1 rounded-md">Senior Projects</span>, and{' '}
+          <span className="text-cyber-orange-400 font-semibold bg-cyber-orange/10 px-2 py-1 rounded-md">Full Systems Development</span>
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 px-4"
+          className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6 px-2 sm:px-4"
         >
-          <CTAButton to="/contact" variant="primary" className="!px-6 !py-4 !font-medium w-full sm:w-auto !text-base touch-target">
+          <CTAButton to="/contact" variant="primary" className="!px-5 !py-3 sm:!px-6 sm:!py-4 !font-medium w-full sm:w-auto !text-sm sm:!text-base touch-target">
             <span>Work With Us</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </CTAButton>
@@ -161,7 +163,7 @@ const HeroSection = memo(() => (
           >
             <Link
               to="/services"
-              className="bg-gradient-to-r from-emerald-400/20 to-blue-500/20 sm:bg-transparent border-2 border-emerald-400/50 sm:border-white/30 text-white hover:bg-gradient-to-r hover:from-emerald-400 hover:to-blue-500 hover:border-transparent hover:text-white px-6 py-4 font-medium rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 w-full sm:w-auto text-base touch-target touch-friendly focus-enhanced"
+              className="bg-gradient-to-r from-emerald-400/20 to-blue-500/20 sm:bg-transparent border-2 border-emerald-400/50 sm:border-white/30 text-white hover:bg-gradient-to-r hover:from-emerald-400 hover:to-blue-500 hover:border-transparent hover:text-white px-5 py-3 sm:px-6 sm:py-4 font-medium rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base touch-target touch-friendly focus-enhanced"
               style={{color: 'white !important'}}
             >
               <Sparkles className="w-4 h-4" />
@@ -205,7 +207,7 @@ const ServicesSection = memo(({ services }) => (
         className="text-center mb-8 sm:mb-12 md:mb-16"
       >
         <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-cyber font-bold mb-4 sm:mb-6">
-          <span className="premium-text">Our Expertise</span>
+          <span className="premium-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Our Expertise</span>
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto px-4 sm:px-0">
           We deliver comprehensive solutions across multiple domains, 
@@ -351,7 +353,6 @@ const Home = () => {
 
   return (
     <main className="min-h-screen">
-      <UrgencyBanner />
       <HeroSection />
       <StatsSection stats={stats} />
       <ServicesSection services={services} />
@@ -368,8 +369,8 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyber-purple/10 border border-cyber-purple/20 rounded-full text-cyber-purple text-sm font-medium mb-6">
-              <Rocket className="w-4 h-4" />
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20 border border-cyber-purple/30 rounded-full text-cyber-purple text-sm font-medium mb-6 shadow-lg shadow-cyber-purple/20">
+              <Rocket className="w-4 h-4 text-cyber-pink" />
               <span>Success Stories</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-cyber font-bold mb-6">

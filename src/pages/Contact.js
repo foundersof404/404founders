@@ -139,7 +139,7 @@ const Contact = () => {
               variants={itemVariants}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-cyber-pink/10 border border-cyber-pink/20 rounded-full text-cyber-pink text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyber-pink/20 to-cyber-purple/20 border border-cyber-pink/30 rounded-full text-cyber-pink text-sm font-medium mb-4 shadow-lg shadow-cyber-pink/20">
                 💬 Get In Touch
               </span>
             </motion.div>
@@ -205,7 +205,7 @@ const Contact = () => {
             >
               <div className="sticky top-32">
                 <h2 className="text-3xl font-cyber font-bold text-white mb-8">
-                  <span className="text-gradient">Contact</span> Information
+                  <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Contact</span> Information
                 </h2>
 
                 {/* Contact Info Cards */}
@@ -263,7 +263,7 @@ const Contact = () => {
             >
               <div className="glass-effect rounded-2xl p-8 border border-dark-border">
                 <h2 className="text-3xl font-cyber font-bold text-white mb-2">
-                  Send Us a <span className="text-gradient">Message</span>
+                  Send Us a <span className="bg-gradient-to-r from-cyber-purple via-cyber-pink to-cyber-orange bg-clip-text text-transparent">Message</span>
                 </h2>
                 <p className="text-text-secondary mb-8">
                   Fill out the form below and we'll get back to you as soon as possible.
@@ -305,7 +305,7 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-              Frequently Asked <span className="text-gradient">Questions</span>
+              Frequently Asked <span className="bg-gradient-to-r from-cyber-green via-cyber-blue to-cyber-purple bg-clip-text text-transparent">Questions</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Find answers to common questions about our services, process, and approach.
@@ -345,7 +345,7 @@ const Contact = () => {
             className="max-w-4xl mx-auto text-center glass-effect rounded-2xl p-12 border border-dark-border"
           >
             <h2 className="text-4xl md:text-5xl font-cyber font-bold mb-6">
-              Ready to Start <span className="text-gradient">Your Journey?</span>
+              Ready to Start <span className="bg-gradient-to-r from-cyber-orange via-cyber-pink to-cyber-purple bg-clip-text text-transparent">Your Journey?</span>
             </h2>
             <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
               Don't wait – let's turn your vision into reality. Schedule a free 

@@ -177,7 +177,7 @@ const Services = () => {
               variants={itemVariants}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-medium mb-4 shadow-lg shadow-cyber-blue/20">
                 🚀 Our Services
               </span>
             </motion.div>
@@ -254,7 +254,7 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-              Our <span className="text-gradient">Development Process</span>
+              Our <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Development Process</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               We follow a proven methodology that ensures quality, efficiency, 
@@ -281,7 +281,7 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-                Why Choose <span className="text-gradient">Founders of 404?</span>
+                Why Choose <span className="bg-gradient-to-r from-cyber-purple via-cyber-pink to-cyber-orange bg-clip-text text-transparent">Founders of 404?</span>
               </h2>
               <p className="text-xl text-text-secondary mb-8">
                 We're not just developers – we're problem solvers, innovators, 
@@ -305,7 +305,7 @@ const Services = () => {
                     viewport={{ once: true }}
                     className="flex items-center space-x-3"
                   >
-                    <div className="flex-shrink-0 w-6 h-6 bg-cyber-blue rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full flex items-center justify-center shadow-lg shadow-cyber-blue/30">
                       <Check size={14} className="text-white" />
                     </div>
                     <p className="text-text-secondary">{benefit}</p>
@@ -388,7 +388,7 @@ const Services = () => {
             className="max-w-4xl mx-auto text-center glass-effect rounded-2xl p-12"
           >
             <h2 className="text-4xl md:text-5xl font-cyber font-bold mb-6">
-              Ready to Start <span className="text-gradient">Your Project?</span>
+              Ready to Start <span className="bg-gradient-to-r from-cyber-green via-cyber-blue to-cyber-purple bg-clip-text text-transparent">Your Project?</span>
             </h2>
             <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
               Let's discuss your needs and create something amazing together. 
@@ -431,7 +431,7 @@ const Services = () => {
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-4">
               <span className="text-white">Why Choose</span>
-              <span className="text-gradient ml-3">Founders of 404?</span>
+              <span className="bg-gradient-to-r from-cyber-orange via-cyber-pink to-cyber-purple bg-clip-text text-transparent ml-3">Founders of 404?</span>
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
               We're committed to delivering exceptional results with every project.

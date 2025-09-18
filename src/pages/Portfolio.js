@@ -19,7 +19,7 @@ const Portfolio = () => {
       description: 'Production e-commerce ecosystem with real revenue generation, achieving 15% conversion improvement and 35% performance optimization through advanced React/TypeScript architecture.',
       fullDescription: 'Aurella Luxe is a production-ready e-commerce platform built with React/TypeScript frontend and Supabase PostgreSQL backend. The platform features real revenue generation with 15% conversion improvement and 35% performance optimization through advanced engineering techniques including route-based code-splitting, custom analytics pipeline, and serverless edge functions for payment processing.',
       category: 'Web',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      image: '/images/aurella-luxe.jpg',
       technologies: ['React', 'TypeScript', 'Supabase', 'Stripe', 'Netlify'],
       features: [
         'Production E-commerce Ecosystem - Real revenue generation with 15% conversion improvement',
@@ -46,7 +46,7 @@ const Portfolio = () => {
       description: 'Full-stack commerce application with type-safe React/TypeScript architecture, PostgreSQL database infrastructure, and optimized state management through React Query caching.',
       fullDescription: 'Vlanco Streetwear is a cutting-edge e-commerce platform designed for modern streetwear brands. Built with React/TypeScript for type safety, it features a PostgreSQL database infrastructure through Supabase, advanced state management with React Query for optimal caching and synchronization, and stunning animations powered by Framer Motion for an engaging user experience.',
       category: 'Web',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
+      image: '/images/vlanco-streetwear.jpg',
       technologies: ['React', 'TypeScript', 'Supabase', 'React Query', 'Framer Motion'],
       features: [
         'Type-Safe Architecture - React/TypeScript frontend with comprehensive type safety',
@@ -264,7 +264,7 @@ const Portfolio = () => {
               variants={itemVariants}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-cyber-green/10 border border-cyber-green/20 rounded-full text-cyber-green text-sm font-medium mb-4 premium-glow">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyber-green/20 to-cyber-blue/20 border border-cyber-green/30 rounded-full text-cyber-green text-sm font-medium mb-4 premium-glow shadow-lg shadow-cyber-green/20">
                 🚀 Our Portfolio
               </span>
             </motion.div>
@@ -339,8 +339,8 @@ const Portfolio = () => {
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       selectedCategory === category
-                        ? 'bg-cyber-blue text-white shadow-lg shadow-cyber-blue/25'
-                        : 'bg-dark-card text-text-secondary hover:text-white hover:bg-cyber-blue/20 border border-dark-border hover:border-cyber-blue/30'
+                        ? 'bg-gradient-to-r from-cyber-blue to-cyber-purple text-white shadow-lg shadow-cyber-blue/25'
+                        : 'bg-dark-card text-text-secondary hover:text-white hover:bg-gradient-to-r hover:from-cyber-blue/20 hover:to-cyber-purple/20 border border-dark-border hover:border-cyber-blue/30'
                     }`}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -444,8 +444,8 @@ const Portfolio = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="glass-effect-premium premium-card rounded-2xl p-8 cyber-glow hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-cyber font-bold text-cyber-blue mb-2">
+                <div className="glass-effect-premium premium-card rounded-2xl p-8 cyber-glow hover:scale-105 transition-all duration-300 bg-gradient-to-br from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/20">
+                  <div className="text-3xl md:text-4xl font-cyber font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   <p className="text-text-secondary">{stat.label}</p>

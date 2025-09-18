@@ -108,7 +108,7 @@ const About = () => {
               variants={itemVariants}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-cyber-purple/10 border border-cyber-purple/20 rounded-full text-cyber-purple text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20 border border-cyber-purple/30 rounded-full text-cyber-purple text-sm font-medium mb-4 shadow-lg shadow-cyber-purple/20">
                 💡 Meet the Team
               </span>
             </motion.div>
@@ -172,7 +172,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-              Our <span className="text-gradient">Core Principles</span>
+              Our <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Core Principles</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               These fundamental beliefs guide our approach to development and client relationships.
@@ -198,7 +198,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-              Meet Our <span className="text-gradient">Founding Team</span>
+              Meet Our <span className="bg-gradient-to-r from-cyber-purple via-cyber-pink to-cyber-orange bg-clip-text text-transparent">Founding Team</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Three dedicated professionals with diverse expertise and a shared passion for innovation.
@@ -225,7 +225,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-              Our <span className="text-gradient">Impact</span>
+              Our <span className="bg-gradient-to-r from-cyber-green via-cyber-blue to-cyber-purple bg-clip-text text-transparent">Impact</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto">
               Numbers that reflect our commitment to excellence and client satisfaction.
@@ -245,8 +245,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="glass-effect rounded-2xl p-8 cyber-glow hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-cyber font-bold text-cyber-blue mb-2">
+                <div className="glass-effect rounded-2xl p-8 cyber-glow hover:scale-105 transition-all duration-300 bg-gradient-to-br from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/20">
+                  <div className="text-3xl md:text-4xl font-cyber font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   <p className="text-text-secondary">{stat.label}</p>
@@ -269,7 +269,7 @@ const About = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
-                Our <span className="text-gradient">Story</span>
+                Our <span className="bg-gradient-to-r from-cyber-orange via-cyber-pink to-cyber-purple bg-clip-text text-transparent">Story</span>
               </h2>
             </motion.div>
 
@@ -282,7 +282,7 @@ const About = () => {
             >
               <div className="prose prose-lg prose-invert max-w-none">
                 <p className="text-text-secondary leading-relaxed mb-6">
-                  Founded in 2025, <span className="text-cyber-blue font-semibold">Founders of 404</span> emerged 
+                  Founded in 2025, <span className="text-cyber-blue font-semibold bg-cyber-blue/10 px-2 py-1 rounded-md">Founders of 404</span> emerged 
                   from a simple belief: that exceptional technology should be accessible to everyone. 
                   What started as three developers sharing ideas in a coffee shop has evolved into 
                   a dynamic team dedicated to pushing the boundaries of digital innovation.
@@ -296,9 +296,9 @@ const About = () => {
                 </p>
 
                 <p className="text-text-secondary leading-relaxed mb-6">
-                  Our diverse backgrounds in <span className="text-cyber-purple">full-stack development</span>, 
-                  <span className="text-cyber-pink"> mobile applications</span>, <span className="text-cyber-green">AI/ML</span>, 
-                  and <span className="text-cyber-orange">systems architecture</span> allow us to tackle 
+                  Our diverse backgrounds in <span className="text-cyber-purple font-semibold bg-cyber-purple/10 px-2 py-1 rounded-md">full-stack development</span>, 
+                  <span className="text-cyber-pink font-semibold bg-cyber-pink/10 px-2 py-1 rounded-md"> mobile applications</span>, <span className="text-cyber-green font-semibold bg-cyber-green/10 px-2 py-1 rounded-md">AI/ML</span>, 
+                  and <span className="text-cyber-orange font-semibold bg-cyber-orange/10 px-2 py-1 rounded-md">systems architecture</span> allow us to tackle 
                   complex challenges from multiple angles. We don't just write code – we craft experiences, 
                   solve problems, and build the future.
                 </p>
