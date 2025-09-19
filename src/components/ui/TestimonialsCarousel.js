@@ -12,7 +12,7 @@ const TestimonialsCarousel = () => {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
       company: 'TechStart Inc.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
+      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face&q=80',
       content: 'Working with Founders of 404 was an exceptional experience. They delivered our e-commerce platform ahead of schedule with 35% better performance than expected. Their attention to detail and technical expertise is unmatched.',
       rating: 5,
       project: 'Aurella Luxe E-Commerce Platform'
@@ -22,7 +22,7 @@ const TestimonialsCarousel = () => {
       name: 'Michael Chen',
       role: 'CTO, FashionForward',
       company: 'FashionForward',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&q=80',
       content: 'The Vlanco Streetwear platform they built for us has revolutionized our online presence. The animations and user experience are incredible, and our conversion rates have increased by 40%. Highly recommended!',
       rating: 5,
       project: 'Vlanco Streetwear Platform'
@@ -32,7 +32,7 @@ const TestimonialsCarousel = () => {
       name: 'Emily Rodriguez',
       role: 'Product Manager, HealthTech Solutions',
       company: 'HealthTech Solutions',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face&q=80',
       content: 'Founders of 404 transformed our mobile health app concept into reality. Their AI integration and real-time features exceeded our expectations. The team is professional, responsive, and truly understands modern development.',
       rating: 5,
       project: 'HealthSync Mobile App'
@@ -42,7 +42,7 @@ const TestimonialsCarousel = () => {
       name: 'David Kim',
       role: 'Founder, DataInsights Pro',
       company: 'DataInsights Pro',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&q=80',
       content: 'Their AI solutions helped us build a predictive analytics platform that has given us a competitive edge. The machine learning models they implemented are incredibly accurate and the dashboard is beautifully designed.',
       rating: 5,
       project: 'SmartPredict AI Platform'
@@ -52,7 +52,7 @@ const TestimonialsCarousel = () => {
       name: 'Lisa Thompson',
       role: 'Director, University Tech',
       company: 'University Tech',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face&q=80',
       content: 'The UniConnect platform they developed for our university has streamlined our academic processes. Students and faculty love the intuitive interface and real-time collaboration features. Outstanding work!',
       rating: 5,
       project: 'UniConnect Academic Platform'

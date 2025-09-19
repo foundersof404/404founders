@@ -19,7 +19,7 @@ const Portfolio = () => {
       description: 'Production e-commerce ecosystem with real revenue generation, achieving 15% conversion improvement and 35% performance optimization through advanced React/TypeScript architecture.',
       fullDescription: 'Aurella Luxe is a production-ready e-commerce platform built with React/TypeScript frontend and Supabase PostgreSQL backend. The platform features real revenue generation with 15% conversion improvement and 35% performance optimization through advanced engineering techniques including route-based code-splitting, custom analytics pipeline, and serverless edge functions for payment processing.',
       category: 'Web',
-      image: '/images/aurella-luxe.jpg',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop&q=80',
       technologies: ['React', 'TypeScript', 'Supabase', 'Stripe', 'Netlify'],
       features: [
         'Production E-commerce Ecosystem - Real revenue generation with 15% conversion improvement',
@@ -46,7 +46,7 @@ const Portfolio = () => {
       description: 'Full-stack commerce application with type-safe React/TypeScript architecture, PostgreSQL database infrastructure, and optimized state management through React Query caching.',
       fullDescription: 'Vlanco Streetwear is a cutting-edge e-commerce platform designed for modern streetwear brands. Built with React/TypeScript for type safety, it features a PostgreSQL database infrastructure through Supabase, advanced state management with React Query for optimal caching and synchronization, and stunning animations powered by Framer Motion for an engaging user experience.',
       category: 'Web',
-      image: '/images/vlanco-streetwear.jpg',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop&q=80',
       technologies: ['React', 'TypeScript', 'Supabase', 'React Query', 'Framer Motion'],
       features: [
         'Type-Safe Architecture - React/TypeScript frontend with comprehensive type safety',
@@ -73,7 +73,7 @@ const Portfolio = () => {
       description: 'A comprehensive web application for tracking environmental metrics with real-time data visualization and reporting capabilities.',
       fullDescription: 'EcoTrack is a full-stack web application built with React and Node.js that helps organizations monitor their environmental impact. Features include real-time data dashboards, automated reporting, predictive analytics, and integration with IoT sensors.',
       category: 'Web',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Chart.js', 'Socket.io'],
       features: [
         'Real-time data visualization',
@@ -98,7 +98,7 @@ const Portfolio = () => {
       description: 'Cross-platform mobile application for personal health tracking with AI-powered insights and doctor connectivity.',
       fullDescription: 'HealthSync is a React Native mobile app that revolutionizes personal health management. It includes symptom tracking, medication reminders, AI health insights, telemedicine integration, and secure health record storage.',
       category: 'Mobile',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=800&fit=crop&q=80',
       technologies: ['React Native', 'Firebase', 'Python', 'TensorFlow', 'AWS'],
       features: [
         'Symptom tracking and analysis',
@@ -123,7 +123,7 @@ const Portfolio = () => {
       description: 'AI-powered platform for business forecasting and predictive analytics with machine learning models and automated insights.',
       fullDescription: 'SmartPredict AI leverages advanced machine learning algorithms to provide businesses with accurate forecasting and predictive insights. The platform includes automated model training, data preprocessing, and visualization tools.',
       category: 'AI',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=800&fit=crop&q=80',
       technologies: ['Python', 'TensorFlow', 'React', 'Docker', 'AWS SageMaker'],
       features: [
         'Automated ML model training',
@@ -148,7 +148,7 @@ const Portfolio = () => {
       description: 'Comprehensive platform for university students to manage projects, collaborate, and access academic resources.',
       fullDescription: 'UniConnect is a web-based platform designed specifically for university students and faculty. It provides project management tools, collaboration features, resource sharing, and academic progress tracking.',
       category: 'Academic',
-      image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=800&fit=crop&q=80',
       technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'NextAuth', 'Tailwind'],
       features: [
         'Project management tools',
@@ -173,7 +173,7 @@ const Portfolio = () => {
       description: 'Enterprise-grade cloud management system for automated deployment, scaling, and monitoring of distributed applications.',
       fullDescription: 'CloudSync Enterprise is a comprehensive cloud management platform that simplifies the deployment and management of cloud infrastructure. It features automated scaling, monitoring, cost optimization, and multi-cloud support.',
       category: 'Systems',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop&q=80',
       technologies: ['Go', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus'],
       features: [
         'Multi-cloud deployment',
@@ -198,7 +198,7 @@ const Portfolio = () => {
       description: 'Modern e-commerce platform with inventory management, analytics, and customer engagement tools.',
       fullDescription: 'RetailFlow is a complete e-commerce solution that provides businesses with tools to manage their online presence, inventory, customers, and sales. Features advanced analytics and AI-powered recommendations.',
       category: 'Web',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop&q=80',
       technologies: ['Vue.js', 'Laravel', 'MySQL', 'Stripe', 'Redis'],
       features: [
         'Product catalog management',

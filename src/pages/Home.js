@@ -313,7 +313,7 @@ const Home = () => {
       solution: "Implemented a modern React-based architecture with server-side rendering, optimized images, and mobile-first design principles.",
       results: "Achieved 40% increase in conversion rates, 60% faster page load times, and 85% improvement in mobile user experience scores.",
       technologies: ["React", "Node.js", "MongoDB", "Redis", "AWS"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop&q=80",
       links: {
         live: "https://example.com",
         github: "https://github.com/example"
@@ -336,7 +336,7 @@ const Home = () => {
       solution: "Developed a machine learning pipeline with automated data processing and intuitive visualization dashboard.",
       results: "Reduced data analysis time by 90%, improved decision-making speed by 70%, and increased user engagement by 150%.",
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL", "Docker"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80",
       links: {
         live: "https://example.com",
         github: "https://github.com/example"
@@ -347,6 +347,52 @@ const Home = () => {
         { value: "90%", label: "Time Reduction" },
         { value: "70%", label: "Faster Decisions" },
         { value: "150%", label: "User Engagement" }
+      ]
+    },
+    {
+      id: 3,
+      title: "Mobile Health Application",
+      client: "HealthTech Solutions",
+      category: "Mobile App",
+      description: "Developed a comprehensive mobile health platform with real-time monitoring, AI diagnostics, and telemedicine capabilities.",
+      challenge: "Creating a secure, HIPAA-compliant platform that could handle sensitive health data while providing excellent user experience.",
+      solution: "Built with React Native, integrated advanced encryption, implemented AI-powered health insights, and created seamless video consultation features.",
+      results: "Achieved 99.9% uptime, 95% user satisfaction, and 200% increase in patient engagement.",
+      technologies: ["React Native", "Node.js", "PostgreSQL", "WebRTC", "TensorFlow"],
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=800&fit=crop&q=80",
+      links: {
+        live: "https://example.com",
+        github: "https://github.com/example"
+      },
+      duration: "6 months",
+      teamSize: "5 developers",
+      metrics: [
+        { value: "99.9%", label: "Uptime" },
+        { value: "95%", label: "User Satisfaction" },
+        { value: "200%", label: "Patient Engagement" }
+      ]
+    },
+    {
+      id: 4,
+      title: "Enterprise Resource Planning System",
+      client: "ManufacturingCorp",
+      category: "Enterprise System",
+      description: "Custom ERP solution integrating inventory management, production planning, and financial analytics for a manufacturing company.",
+      challenge: "Legacy systems were fragmented and couldn't scale with business growth, leading to operational inefficiencies.",
+      solution: "Developed a modern microservices architecture with real-time data synchronization, automated workflows, and comprehensive reporting.",
+      results: "Reduced operational costs by 30%, improved inventory accuracy by 95%, and increased production efficiency by 25%.",
+      technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "Kubernetes"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80",
+      links: {
+        live: "https://example.com",
+        github: "https://github.com/example"
+      },
+      duration: "8 months",
+      teamSize: "6 developers",
+      metrics: [
+        { value: "30%", label: "Cost Reduction" },
+        { value: "95%", label: "Inventory Accuracy" },
+        { value: "25%", label: "Production Efficiency" }
       ]
     }
   ], []);

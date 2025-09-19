@@ -19,7 +19,7 @@ const BlogPreview = ({
       date: "2024-01-15",
       readTime: "8 min read",
       category: "Web Development",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&h=800&fit=crop&q=80",
       slug: "scalable-react-applications-2024"
     },
     {
@@ -30,7 +30,7 @@ const BlogPreview = ({
       date: "2024-01-10",
       readTime: "12 min read",
       category: "AI & Machine Learning",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=800&fit=crop&q=80",
       slug: "ai-integration-web-applications"
     },
     {
@@ -41,7 +41,7 @@ const BlogPreview = ({
       date: "2024-01-05",
       readTime: "6 min read",
       category: "UI/UX Design",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop&q=80",
       slug: "mobile-first-design-guide"
     }
   ];
