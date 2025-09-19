@@ -162,7 +162,7 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-gradient-to-b from-cyber-dark/50 to-cyber-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -171,6 +171,10 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-medium mb-6 shadow-lg shadow-cyber-blue/20">
+              <Target className="w-4 h-4" />
+              <span>Our Foundation</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
               Our <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Core Principles</span>
             </h2>
@@ -188,7 +192,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-gradient-to-b from-cyber-dark/30 to-cyber-dark/50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -197,6 +201,10 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20 border border-cyber-purple/30 rounded-full text-cyber-purple text-sm font-medium mb-6 shadow-lg shadow-cyber-purple/20">
+              <Award className="w-4 h-4" />
+              <span>Meet Our Team</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
               Meet Our <span className="bg-gradient-to-r from-cyber-purple via-cyber-pink to-cyber-orange bg-clip-text text-transparent">Founding Team</span>
             </h2>

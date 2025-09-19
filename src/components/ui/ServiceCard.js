@@ -8,7 +8,11 @@ import {
   Smartphone, 
   Brain, 
   GraduationCap, 
-  Settings 
+  Settings,
+  Star,
+  Zap,
+  Shield,
+  Rocket
 } from 'lucide-react';
 
 const ServiceCard = ({ service, index }) => {
@@ -36,6 +40,77 @@ const ServiceCard = ({ service, index }) => {
   };
 
   const Icon = getIcon(iconName);
+
+  // Framework and technology logos mapping
+  const getFrameworkLogo = (tech) => {
+    const logos = {
+      'React': '⚛️',
+      'Next.js': '▲',
+      'Node.js': '🟢',
+      'TypeScript': '🔷',
+      'JavaScript': '🟨',
+      'Python': '🐍',
+      'PostgreSQL': '🐘',
+      'MongoDB': '🍃',
+      'AWS': '☁️',
+      'Docker': '🐳',
+      'Kubernetes': '⚙️',
+      'Redis': '🔴',
+      'GraphQL': '🔷',
+      'Firebase': '🔥',
+      'TensorFlow': '🧠',
+      'PyTorch': '🔥',
+      'Flutter': '🦋',
+      'React Native': '📱',
+      'Swift': '🍎',
+      'Kotlin': '🟣',
+      'HTML': '🌐',
+      'CSS': '🎨',
+      'Git': '📦',
+      'Nginx': '🌐',
+      'Jenkins': '🔧',
+      'Various': '🔧',
+      'Research': '🔬',
+      'Documentation': '📚',
+      'Academic Tools': '🎓'
+    };
+    return logos[tech] || '💻';
+  };
+
+  const getFrameworkColor = (tech) => {
+    const colors = {
+      'React': 'text-blue-400',
+      'Next.js': 'text-gray-100',
+      'Node.js': 'text-green-400',
+      'TypeScript': 'text-blue-500',
+      'JavaScript': 'text-yellow-400',
+      'Python': 'text-yellow-500',
+      'PostgreSQL': 'text-blue-300',
+      'MongoDB': 'text-green-300',
+      'AWS': 'text-orange-400',
+      'Docker': 'text-blue-300',
+      'Kubernetes': 'text-blue-400',
+      'Redis': 'text-red-400',
+      'GraphQL': 'text-pink-400',
+      'Firebase': 'text-orange-400',
+      'TensorFlow': 'text-orange-500',
+      'PyTorch': 'text-red-500',
+      'Flutter': 'text-blue-400',
+      'React Native': 'text-blue-500',
+      'Swift': 'text-orange-400',
+      'Kotlin': 'text-purple-400',
+      'HTML': 'text-orange-500',
+      'CSS': 'text-blue-400',
+      'Git': 'text-orange-500',
+      'Nginx': 'text-green-400',
+      'Jenkins': 'text-blue-500',
+      'Various': 'text-gray-400',
+      'Research': 'text-purple-400',
+      'Documentation': 'text-blue-400',
+      'Academic Tools': 'text-green-400'
+    };
+    return colors[tech] || 'text-gray-400';
+  };
 
   const getColorClass = (colorName) => {
     const colors = {
@@ -92,50 +167,59 @@ const ServiceCard = ({ service, index }) => {
 
         {/* Header Section */}
         <div className="relative z-10 mb-8">
-          {/* Icon */}
-          <motion.div
-            className="mb-6"
-            whileHover={{ 
-              scale: 1.1,
-              rotateY: 180,
-            }}
-            transition={{ 
-              duration: 0.6,
-              type: "spring",
-              stiffness: 200,
-            }}
-            style={{ transformStyle: "preserve-3d" }}
-          >
-            <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradient} p-0.5 group-hover:shadow-lg transition-shadow duration-300`}>
-              <div className="w-full h-full bg-cyber-dark rounded-2xl flex items-center justify-center">
-                <Icon className="w-10 h-10 text-white" />
+          {/* Icon and Premium Badge */}
+          <div className="flex items-center justify-between mb-6">
+            <motion.div
+              className="flex items-center space-x-4"
+              whileHover={{ 
+                scale: 1.05,
+              }}
+              transition={{ 
+                duration: 0.3,
+                type: "spring",
+                stiffness: 200,
+              }}
+            >
+              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradient} p-0.5 group-hover:shadow-lg transition-shadow duration-300`}>
+                <div className="w-full h-full bg-cyber-dark rounded-2xl flex items-center justify-center">
+                  <Icon className="w-10 h-10 text-white" />
+                </div>
               </div>
-            </div>
+              
+              {/* Premium Badge */}
+              <motion.div
+                className="flex items-center space-x-1 px-3 py-1 bg-gradient-to-r from-elegant-gold/20 to-elegant-rose/20 border border-elegant-gold/30 rounded-full"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Star className="w-3 h-3 text-elegant-gold" />
+                <span className="text-xs font-medium text-elegant-gold">Premium</span>
+              </motion.div>
+            </motion.div>
+          </div>
 
-            {/* Floating particles around icon */}
-            <div className="absolute inset-0 pointer-events-none">
-              {[...Array(8)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className={`absolute w-1 h-1 bg-${color} rounded-full opacity-0 group-hover:opacity-100`}
-                  style={{
-                    left: `${40 + Math.cos(i * 45 * Math.PI / 180) * 35}px`,
-                    top: `${40 + Math.sin(i * 45 * Math.PI / 180) * 35}px`,
-                  }}
-                  animate={{
-                    scale: [0, 1.5, 0],
-                    opacity: [0, 1, 0],
-                    rotate: [0, 180],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                  }}
-                />
-              ))}
-            </div>
-          </motion.div>
+          {/* Floating particles around icon */}
+          <div className="absolute inset-0 pointer-events-none">
+            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={i}
+                className={`absolute w-1 h-1 bg-${color} rounded-full opacity-0 group-hover:opacity-100`}
+                style={{
+                  left: `${40 + Math.cos(i * 45 * Math.PI / 180) * 35}px`,
+                  top: `${40 + Math.sin(i * 45 * Math.PI / 180) * 35}px`,
+                }}
+                animate={{
+                  scale: [0, 1.5, 0],
+                  opacity: [0, 1, 0],
+                  rotate: [0, 180],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                }}
+              />
+            ))}
+          </div>
 
           {/* Title and Subtitle */}
           <motion.div
@@ -193,10 +277,13 @@ const ServiceCard = ({ service, index }) => {
 
         {/* Technologies */}
         <div className="relative z-10 mb-8">
-          <h4 className="text-white font-semibold mb-4">Technologies:</h4>
-          <div className="flex flex-wrap gap-2">
+          <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
+            <Zap className="w-4 h-4 text-cyber-blue" />
+            <span>Technologies & Frameworks:</span>
+          </h4>
+          <div className="grid grid-cols-2 gap-3">
             {technologies.map((tech, techIndex) => (
-              <motion.span
+              <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -205,11 +292,14 @@ const ServiceCard = ({ service, index }) => {
                   delay: index * 0.2 + techIndex * 0.1,
                 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.1, y: -2 }}
-                className={`px-3 py-1 bg-dark-card border border-${color}/20 text-${color} text-xs rounded-full hover:border-${color}/40 hover:bg-${color}/10 transition-all duration-300`}
+                whileHover={{ scale: 1.05, y: -2 }}
+                className="flex items-center space-x-2 px-3 py-2 bg-dark-card border border-dark-border rounded-lg hover:border-cyber-blue/30 hover:bg-cyber-blue/5 transition-all duration-300"
               >
-                {tech}
-              </motion.span>
+                <span className="text-lg">{getFrameworkLogo(tech)}</span>
+                <span className={`text-sm font-medium ${getFrameworkColor(tech)}`}>
+                  {tech}
+                </span>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -235,20 +325,35 @@ const ServiceCard = ({ service, index }) => {
           </motion.button>
         </motion.div>
 
-        {/* CTA Button */}
-        <motion.div
-          className="relative z-10 mt-auto"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          <Link
-            to="/contact"
-            className={`cyber-button group w-full flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r ${gradient} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 touch-friendly`}
+        {/* Pricing and CTA Section */}
+        <div className="relative z-10 mt-auto space-y-4">
+          {/* Pricing */}
+          <motion.div
+            className="flex items-center justify-between p-4 bg-gradient-to-r from-cyber-dark/50 to-cyber-dark/30 border border-dark-border rounded-lg"
+            whileHover={{ scale: 1.02 }}
           >
-            <span>Get Started</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
+            <div className="flex items-center space-x-2">
+              <Shield className="w-5 h-5 text-cyber-green" />
+              <span className="text-text-secondary text-sm">Starting at</span>
+            </div>
+            <span className="text-2xl font-bold text-elegant-gold">{price}</span>
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Link
+              to="/contact"
+              className={`cyber-button group w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r ${gradient} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 touch-friendly`}
+            >
+              <Rocket className="w-4 h-4" />
+              <span>Get Started Now</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
 
         {/* 3D Depth Lines */}
         <motion.div

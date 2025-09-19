@@ -2050,6 +2050,98 @@ html {
   }
 }
 
+/* Optimized Smooth Scrolling */
+html {
+  scroll-behavior: auto; /* Let Lenis handle smooth scrolling */
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior: none; /* Prevent bounce on mobile */
+}
+
+/* Smooth scroll container */
+.smooth-scroll-container {
+  height: 100%;
+  overflow-x: hidden;
+  will-change: transform; /* Optimize for smooth scrolling */
+}
+
+/* Apple-style scroll effects */
+:root {
+  --scroll-velocity: 0;
+}
+
+/* Disable native smooth scrolling to prevent conflicts */
+* {
+  scroll-behavior: auto;
+}
+
+/* Optimize for performance */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-scroll-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* GSAP Animation Classes */
+.hero-title {
+  transform-origin: center bottom;
+}
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.card-animate {
+  transform-origin: center center;
+}
+
+.section-transition {
+  transform-origin: center center;
+}
+
+.parallax-image {
+  transform-origin: center center;
+}
+
+/* Apple-style button interactions */
+.gsap-button {
+  transform-origin: center center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gsap-button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Apple-style scroll progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8b5cf6, #f73c7e, #00f5ff);
+  transform-origin: left;
+  z-index: 9999;
+}
+
+/* Apple-style momentum effects */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Enhanced scroll performance for Apple devices */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+}
+
 /* Dark Mode Optimizations */
 @media (prefers-color-scheme: dark) {
   .auto-dark {

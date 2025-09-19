@@ -127,7 +127,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden bg-gradient-to-b from-cyber-dark/50 to-cyber-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
             variants={containerVariants}

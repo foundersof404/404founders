@@ -162,10 +162,146 @@ const Services = () => {
     },
   };
 
+  // Unique animation variants for each service section
+  const serviceSectionVariants = {
+    webDev: {
+      hidden: { opacity: 0, x: -100, rotateY: -15 },
+      visible: {
+        opacity: 1,
+        x: 0,
+        rotateY: 0,
+        transition: {
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        },
+      },
+    },
+    mobileDev: {
+      hidden: { opacity: 0, x: 100, rotateY: 15 },
+      visible: {
+        opacity: 1,
+        x: 0,
+        rotateY: 0,
+        transition: {
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        },
+      },
+    },
+    aiSolutions: {
+      hidden: { opacity: 0, y: 100, scale: 0.8 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+          duration: 0.8,
+          ease: [0.34, 1.56, 0.64, 1],
+        },
+      },
+    },
+    consulting: {
+      hidden: { opacity: 0, scale: 0.5, rotate: -10 },
+      visible: {
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+        transition: {
+          duration: 0.8,
+          ease: [0.68, -0.55, 0.265, 1.55],
+        },
+      },
+    },
+  };
+
+  // Stable hover animations for service cards
+  const cardHoverVariants = {
+    webDev: {
+      hover: {
+        y: -5,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+        },
+      },
+    },
+    mobileDev: {
+      hover: {
+        y: -5,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+        },
+      },
+    },
+    aiSolutions: {
+      hover: {
+        y: -5,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+        },
+      },
+    },
+    consulting: {
+      hover: {
+        y: -5,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+        },
+      },
+    },
+  };
+
+  // Stable background animations (removed to prevent quality loss)
+  const backgroundAnimations = {
+    webDev: {
+      animate: {
+        opacity: [0.3, 0.6, 0.3],
+      },
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+    mobileDev: {
+      animate: {
+        opacity: [0.3, 0.6, 0.3],
+      },
+      transition: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+    aiSolutions: {
+      animate: {
+        opacity: [0.3, 0.6, 0.3],
+      },
+      transition: {
+        duration: 12,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+    consulting: {
+      animate: {
+        opacity: [0.3, 0.6, 0.3],
+      },
+      transition: {
+        duration: 15,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden bg-gradient-to-b from-cyber-dark/50 to-cyber-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -232,18 +368,192 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative bg-gradient-to-b from-cyber-dark/30 to-cyber-dark/50 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div
+            className="absolute top-20 left-10 w-32 h-32 border border-cyber-blue/10 rounded-full"
+            animate={{
+              rotate: 360,
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-10 w-24 h-24 border border-cyber-purple/10 rounded-lg"
+            animate={{
+              rotate: -360,
+              scale: [1, 1.3, 1],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-16 h-16 border border-cyber-pink/10 rounded-full"
+            animate={{
+              rotate: 180,
+              scale: [1, 1.5, 1],
+              opacity: [0.1, 0.4, 0.1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20 border border-cyber-purple/30 rounded-full text-cyber-purple text-sm font-medium mb-6 shadow-lg shadow-cyber-purple/20">
+              <Check className="w-4 h-4" />
+              <span>Our Solutions</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
+              Choose Your <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Perfect Solution</span>
+            </h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Each service is designed to meet specific needs and deliver exceptional results.
+            </p>
+          </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
-            ))}
+            {services.map((service, index) => {
+              // Determine animation type based on service
+              const getAnimationType = (serviceId) => {
+                switch (serviceId) {
+                  case 1: return 'webDev';
+                  case 2: return 'mobileDev';
+                  case 3: return 'aiSolutions';
+                  case 4: return 'consulting';
+                  default: return 'webDev';
+                }
+              };
+
+              const animationType = getAnimationType(service.id);
+              const sectionVariants = serviceSectionVariants[animationType];
+              const hoverVariants = cardHoverVariants[animationType];
+              const backgroundAnimation = backgroundAnimations[animationType];
+
+              return (
+                <motion.div
+                  key={service.id}
+                  variants={sectionVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  whileHover="hover"
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="relative group"
+                  style={{ perspective: "1000px" }}
+                >
+                  {/* Stable Background */}
+                  <motion.div
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(135deg, 
+                        ${service.color === 'cyber-blue' ? '#3b82f6' : 
+                          service.color === 'cyber-purple' ? '#8b5cf6' :
+                          service.color === 'cyber-pink' ? '#ec4899' :
+                          service.color === 'cyber-green' ? '#10b981' :
+                          service.color === 'cyber-orange' ? '#f59e0b' : '#3b82f6'
+                        }15, 
+                        ${service.color === 'cyber-blue' ? '#1d4ed8' : 
+                          service.color === 'cyber-purple' ? '#7c3aed' :
+                          service.color === 'cyber-pink' ? '#db2777' :
+                          service.color === 'cyber-green' ? '#059669' :
+                          service.color === 'cyber-orange' ? '#d97706' : '#1d4ed8'
+                        }15)`,
+                    }}
+                    animate={backgroundAnimation.animate}
+                    transition={backgroundAnimation.transition}
+                  />
+
+                  {/* Subtle Floating Elements */}
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-6 h-6 border border-cyber-blue/20 rounded-full opacity-0 group-hover:opacity-60"
+                    animate={{
+                      rotate: 360,
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-4 -left-4 w-4 h-4 border border-cyber-purple/20 rounded-full opacity-0 group-hover:opacity-60"
+                    animate={{
+                      rotate: -360,
+                    }}
+                    transition={{
+                      duration: 10,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+
+                  {/* Service Card with Enhanced Animations */}
+                  <motion.div
+                    variants={hoverVariants}
+                    className="relative z-10"
+                    style={{ transformStyle: "preserve-3d" }}
+                  >
+                    <ServiceCard service={service} index={index} />
+                  </motion.div>
+
+                  {/* Subtle Section-specific decorative elements */}
+                  {animationType === 'webDev' && (
+                    <motion.div
+                      className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyber-blue/50 to-cyber-purple/50 opacity-0 group-hover:opacity-100"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                  
+                  {animationType === 'mobileDev' && (
+                    <motion.div
+                      className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-cyber-purple/50 to-cyber-pink/50 opacity-0 group-hover:opacity-100"
+                      initial={{ scaleY: 0 }}
+                      whileHover={{ scaleY: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                  
+                  {animationType === 'aiSolutions' && (
+                    <motion.div
+                      className="absolute inset-0 rounded-2xl border border-cyber-pink/20 opacity-0 group-hover:opacity-100"
+                    />
+                  )}
+                  
+                  {animationType === 'consulting' && (
+                    <motion.div
+                      className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-cyber-orange/10 to-cyber-purple/10 opacity-0 group-hover:opacity-100"
+                    />
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-gradient-to-b from-cyber-dark/50 to-cyber-dark/30">
         <div className="absolute inset-0 bg-gradient-to-r from-cyber-blue/5 via-cyber-purple/5 to-cyber-pink/5" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -253,6 +563,10 @@ const Services = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyber-green/20 to-cyber-blue/20 border border-cyber-green/30 rounded-full text-cyber-green text-sm font-medium mb-6 shadow-lg shadow-cyber-green/20">
+              <ArrowRight className="w-4 h-4" />
+              <span>Our Process</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-cyber font-bold mb-6">
               Our <span className="bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink bg-clip-text text-transparent">Development Process</span>
             </h2>
